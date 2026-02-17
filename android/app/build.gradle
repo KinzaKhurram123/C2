@@ -80,10 +80,10 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.ridelink"
+    namespace "com.C2"
 
     defaultConfig {
-        applicationId "com.ridelink"
+        applicationId "com.C2"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
