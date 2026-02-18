@@ -12,72 +12,13 @@ import { SetUserRole } from '../Store/slices/auth-slice';
 import { setUserLogOut } from '../Store/slices/common';
 import { windowHeight, windowWidth } from '../Utillity/utils';
 import LinearGradient from 'react-native-linear-gradient';
+import { drawer_items } from '../Config/arrays';
 
 const Drawer = React.memo(() => {
   const dispatch = useDispatch();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const navigation = useNavigation();
-  const adminData = [
-    {
-      id: 1,
-      name: 'Home',
-      onPress: () => {
-        navigation.navigate('Home');
-      },
-    },
 
-    {
-      id: 4,
-      name: 'wallet',
-      onPress: null
-      // onPress: () => {
-      //   navigation.navigate('MyWallet');
-      // },
-    },
-
-    {
-      id: 4,
-      name: 'History',
-      onPress: null
-
-      // onPress: () => {
-      //   navigation.navigate('History');
-      // },
-    },
-    {
-      id: 5,
-      name: 'Accounts ',
-      onPress: null
-
-      // onPress: () => {
-      //   navigation.navigate('Profile');
-      // },
-    },
-    {
-      id: 6,
-      name: 'Change password ',
-      onPress: null
-      // onPress: () => {
-      //   navigation.navigate('ChangePassword');
-      // },
-    },
-    {
-      id: 6,
-      name: 'privacy policy ',
-      onPress: null
-      // onPress: () => {
-      //   navigation.navigate('PrivacyPolicy');
-      // },
-    },
-    {
-      id: 6,
-      name: 'terms & conditions',
-      onPress: null
-      // onPress: () => {
-      //   navigation.navigate('TermsAndConditions');
-      // },
-    },
-  ];
 
   return (
     <ScreenBoiler
@@ -109,7 +50,7 @@ const Drawer = React.memo(() => {
               height: '60%',
               marginTop: moderateScale(20, 0.6)
             }}>
-            {adminData.map((item, index) => (
+            {drawer_items.map((item, index) => (
               <>
                 <TouchableOpacity
                   key={item.id}

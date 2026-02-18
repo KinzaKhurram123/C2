@@ -79,6 +79,7 @@ android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
+     missingDimensionStrategy 'react-native-camera', 'general'
 
     namespace "com.C2"
 
@@ -86,18 +87,17 @@ android {
         applicationId "com.C2"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
-        missingDimensionStrategy 'react-native-camera', 'general'
+        versionCode 2
+        versionName "1.0.1"
             //  ndk {
             //     abiFilters "armeabi-v7a", "arm64-v8a" // Include relevant ABIs
             // }
-                ndk {
-        abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-    }
+        ndk {
+                 abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
             externalNativeBuild {
                 cmake {
-                    cppFlags "-std=c++17" // Example flag, adjust as needed
+                    cppFlags "-std=c++17" 
                 }
         }
     signingConfigs {

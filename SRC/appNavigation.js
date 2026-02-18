@@ -38,7 +38,6 @@ import PrivacyPolicy from './Screens/PrivacyPolicy';
 enableScreens();
 const AppNavigator = () => {
   const isGoalCreated = useSelector(state => state.authReducer.isGoalCreated);
-  // const walkThrough = useSelector(state => state.authReducer.userWalkThrough);
   const walkThrough = true
   const role = useSelector(state => state.authReducer.role);
   const isVerified = useSelector(state => state.authReducer.isVerified);
@@ -127,7 +126,7 @@ export const MyDrawer = () => {
   return (
     <DrawerNavigation.Navigator
       drawerContent={props => <Drawer {...props} />}
-      initialRouteName={'PlaceholderScreen'}
+      initialRouteName={'Home'}
       screenOptions={{
         headerShown: false,
         drawerStyle: {
@@ -141,8 +140,6 @@ export const MyDrawer = () => {
         component={PlaceholderScreen}
       />
       <DrawerNavigation.Screen name="Home" component={Home} />
-
-
       <DrawerNavigation.Screen name={'RateScreen'} component={RateScreen} />
       <DrawerNavigation.Screen name="RideScreen" component={RideScreen} />
       <DrawerNavigation.Screen name="PaymentScreen" component={PaymentScreen} />
